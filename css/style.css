@@ -446,7 +446,7 @@ img {
 	position: absolute;
 	background-color: transparent;
 	border: none;
-	background-image: url("images/icons/next-arrow.png");
+	background-image: url("../images/icons/next-arrow.png");
 	background-repeat: no-repeat;
 	background-size: 50px 70px;
 	background-position: center;
@@ -472,7 +472,7 @@ img {
 	position: absolute;
 	background-color: transparent;
 	border: none;
-	background-image: url("images/icons/prev-arrow.png");
+	background-image: url("../images/icons/prev-arrow.png");
 	background-repeat: no-repeat;
 	background-size: 50px 70px;
 	background-position: center;
@@ -497,7 +497,7 @@ img {
 	position: relative;
 	display: flex;
 	flex-wrap: nowrap;
-	margin-right: 15px;
+	margin-right: 20px;
 }
 
 /* Размеры для блока с картинкой */
