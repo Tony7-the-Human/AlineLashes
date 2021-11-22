@@ -795,26 +795,26 @@ img {
 
 /* Добавив, соответствующие классы выводим картики соц.сетей через свойство background-image: url("путь до папки с картинками"); */
 .insta {
-	background-image: url("images/icons/insta.png");
+	background-image: url("../images/icons/insta.png");
 }
 
 /* Добавляем ховер-эффекты, заменяя картинку на другую (другого цвета, например) */
 .insta:hover {
-	background-image: url("images/icons/insta-hover.png");
+	background-image: url("../images/icons/insta-hover.png");
 }
 
 .vk {
-	background-image: url("images/icons/vk.png");
+	background-image: url("../images/icons/vk.png");
 }
 
 .vk:hover {
-	background-image: url("images/icons/vk-hover.png");
+	background-image: url("../images/icons/vk-hover.png");
 }
 
 .fb {
-	background-image: url("images/icons/fb.png");
+	background-image: url("../images/icons/fb.png");
 }
 
 .fb:hover {
-	background-image: url("images/icons/fb-hover.png");
+	background-image: url("../images/icons/fb-hover.png");
 }
