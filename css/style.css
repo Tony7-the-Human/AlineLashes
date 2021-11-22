@@ -258,6 +258,10 @@ img {
 	z-index: 1;
 }
 
+.welcome-image img {
+	border-radius: 258.423px 0px;
+}
+
 /* Делаем рамку для картинки с помощью псевдоэлемента ::before. Чтобы он работал мы задаем классу welcome-image position: relative;, а псевдоэлементу ::before задаем абсолютное позиционирование */
 .welcome-image::before {
 	position: absolute;
