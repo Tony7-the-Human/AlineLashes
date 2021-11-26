@@ -25,327 +25,337 @@
 		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 	</head>
 	<body>
-		<!-- Делаем шапку сайта с навигацией -->
-		<header class="header">
-			<!-- В header помещен кконтент всей шапки сайта + задан класс ограничивающего контейнера - header-container для контента шапки(чтобы контент не расползался по всей ширине экрана)-->
-			<div class="header-content header-container">
-				<!-- header-content состоит из двух элементов (в будущем flexbox-элементов) - header-body и header-nav. Весь header-body обернут в тег а (ссылка): будет кликабелен и вести на главную страницу сайта -->
-				<div class="header-body">
-					<a href="#" class="header-logo-link">
-						<!-- логотип + текст логотипа -->
-						<p class="header-logo">AllinLashes</p>
-						<p class="header-text">Студия наращивания ресниц</p>
-						<!-- ./логотип + текст логотипа -->
-					</a>
-				</div>
-				<!-- Описание навигации сайта. Делаем его списком -->
-				<nav class="header-nav">
-					<ul class="header-list">
-						<li class="header-item"><a href="#" class="header-link">Услуги и прайс</a></li>
-						<li class="header-item"><a href="#" class="header-link">Наши работы</a></li>
-						<li class="header-item"><a href="#" class="header-link">Онлайн запись</a></li>
-					</ul>
-				</nav>
-			</div>
-		</header>
-		<!-- ./Делаем шапку сайта с навигацией -->
-
-		<!-- Делаем разметку для первого блока главной страницы -->
-		<!-- Создаем секцию для всего первого блока, назовем ее welcome (названия произвольные, но подходящие по смыслу, т.к. данный блок первый и как бы приветствует пользователя) -->
-		<section class="section-welcome">
-			<!-- Задаем ограничивающий контейнер для контента блока -->
-			<div class="container">
-				<!-- Сам контент блока, его будем использовать в качестве flex-контейнера -->
-				<div class="welcome-content">
-					<!-- "Тело" контента блока - в нем располагаем весь контент: текст, кнопку, картинки и т.д. -->
-					<div class="welcome-body">
-						<!-- Главный заголовок H1. -->
-						<h1 class="welcome-title">Студия профессионального наращивания ресниц в Москве</h1>
-						<!-- Текст-описания -->
-						<p class="welcome-description">
-							<!-- Часть текста описания в макете выделено другим цветом, поэтому оборачиваем необходимый нам текст в тег span и даем ему класс, например, "welcome-description-colorize" -->
-							Приходи к нам и <span class="welcome-description-colorize">получи бесплатную консультацию</span> от сертифицированного
-							лашмейкера
-						</p>
-						<!-- Кнопка. Т.к. стили кнопок в макете имеют схожую структуру друг с другом, логичнее всего задать будущей кнопке отдельно стили для текста и общие для всех кнопок в макете стили -->
-						<a class="welcome-btn btn">Записаться</a>
+		<div class="page-wrapper">
+			<!-- Делаем шапку сайта с навигацией -->
+			<header class="header">
+				<!-- В header помещен кконтент всей шапки сайта + задан класс ограничивающего контейнера - header-container для контента шапки(чтобы контент не расползался по всей ширине экрана)-->
+				<div class="header-content header-container">
+					<!-- header-content состоит из двух элементов (в будущем flexbox-элементов) - header-body и header-nav. Весь header-body обернут в тег а (ссылка): будет кликабелен и вести на главную страницу сайта -->
+					<div class="header-body">
+						<a href="#" class="header-logo-link">
+							<!-- логотип + текст логотипа -->
+							<p class="header-logo">AllinLashes</p>
+							<p class="header-text">Студия наращивания ресниц</p>
+							<!-- ./логотип + текст логотипа -->
+						</a>
 					</div>
-					<!-- Картинка -->
-					<div class="welcome-image">
-						<img src="./images/hero-image.jpg" alt="Фото для главного блока" />
-					</div>
+					<!-- Описание навигации сайта. Делаем его списком -->
+					<nav class="header-nav">
+						<ul class="header-list">
+							<li class="header-item"><a href="#" class="header-link">Услуги и прайс</a></li>
+							<li class="header-item"><a href="./pages/ourworks.html" class="header-link">Наши работы</a></li>
+							<li class="header-item"><a href="#" class="header-link">Онлайн запись</a></li>
+						</ul>
+					</nav>
 				</div>
-			</div>
-		</section>
-		<!-- ./Делаем разметку для первого блока главной страницы -->
-
-		<!-- Делаем разметку для второго блока главной страницы -->
-		<section class="section-about">
-			<!-- Ограничивающий контейнер -->
-			<div class="container">
-				<div class="about-content">
-					<h2 class="about-title title">Выбери нас</h2>
-					<div class="about-description">Мы заботимся о вашей красоте и комфорте!</div>
-					<!-- Общий контейнер для контентной части (картинки и текст) -->
-					<div class="about-body">
-						<div class="about-body-item">
-							<img src="./images/icons/sertific-icon.svg" alt="Сертифицированные мастера" class="about-body-image" />
-							<p class="about-body-text">Сертифицированные мастера</p>
+			</header>
+			<!-- ./Делаем шапку сайта с навигацией -->
+			<main class="main-page">
+				<!-- Делаем разметку для первого блока главной страницы -->
+				<!-- Создаем секцию для всего первого блока, назовем ее welcome (названия произвольные, но подходящие по смыслу, т.к. данный блок первый и как бы приветствует пользователя) -->
+				<section class="section-welcome">
+					<!-- Задаем ограничивающий контейнер для контента блока -->
+					<div class="container">
+						<!-- Сам контент блока, его будем использовать в качестве flex-контейнера -->
+						<div class="welcome-content">
+							<!-- "Тело" контента блока - в нем располагаем весь контент: текст, кнопку, картинки и т.д. -->
+							<div class="welcome-body">
+								<!-- Главный заголовок H1. -->
+								<h1 class="welcome-title">Студия профессионального наращивания ресниц в Москве</h1>
+								<!-- Текст-описания -->
+								<p class="welcome-description">
+									<!-- Часть текста описания в макете выделено другим цветом, поэтому оборачиваем необходимый нам текст в тег span и даем ему класс, например, "welcome-description-colorize" -->
+									Приходи к нам и <span class="welcome-description-colorize">получи бесплатную консультацию</span> от сертифицированного
+									лашмейкера
+								</p>
+								<!-- Кнопка. Т.к. стили кнопок в макете имеют схожую структуру друг с другом, логичнее всего задать будущей кнопке отдельно стили для текста и общие для всех кнопок в макете стили -->
+								<a class="welcome-btn btn">Записаться</a>
+							</div>
+							<!-- Картинка -->
+							<div class="welcome-image">
+								<img src="./images/hero-image.jpg" alt="Фото для главного блока" />
+							</div>
 						</div>
-						<div class="about-body-item">
-							<img
-								src="./images/icons/clear-icon.svg"
-								alt="Соблюдение
+					</div>
+				</section>
+				<!-- ./Делаем разметку для первого блока главной страницы -->
+
+				<!-- Делаем разметку для второго блока главной страницы -->
+				<section class="section-about">
+					<!-- Ограничивающий контейнер -->
+					<div class="container">
+						<div class="about-content">
+							<h2 class="about-title title">Выбери нас</h2>
+							<div class="about-description">Мы заботимся о вашей красоте и комфорте!</div>
+							<!-- Общий контейнер для контентной части (картинки и текст) -->
+							<div class="about-body">
+								<div class="about-body-item">
+									<img src="./images/icons/sertific-icon.svg" alt="Сертифицированные мастера" class="about-body-image" />
+									<p class="about-body-text">Сертифицированные мастера</p>
+								</div>
+								<div class="about-body-item">
+									<img
+										src="./images/icons/clear-icon.svg"
+										alt="Соблюдение
                             чистоты"
-								class="about-body-image"
-							/>
-							<p class="about-body-text">Соблюдение чистоты</p>
-						</div>
-						<div class="about-body-item">
-							<img
-								src="./images/icons/matherials-icon.svg"
-								alt="Материалы 
+										class="about-body-image"
+									/>
+									<p class="about-body-text">Соблюдение чистоты</p>
+								</div>
+								<div class="about-body-item">
+									<img
+										src="./images/icons/matherials-icon.svg"
+										alt="Материалы 
                             премиум-класса"
-								class="about-body-image"
-							/>
-							<p class="about-body-text">Материалы премиум-класса</p>
-						</div>
-						<div class="about-body-item">
-							<img
-								src="./images/icons//loyalty-icon.svg"
-								alt="Система 
+										class="about-body-image"
+									/>
+									<p class="about-body-text">Материалы премиум-класса</p>
+								</div>
+								<div class="about-body-item">
+									<img
+										src="./images/icons//loyalty-icon.svg"
+										alt="Система 
                             лояльности"
-								class="about-body-image"
-							/>
-							<p class="about-body-text">Система лояльности</p>
-						</div>
-						<div class="about-body-item">
-							<img
-								src="./images/icons/discount-icon.svg"
-								alt="Скидка 15%
+										class="about-body-image"
+									/>
+									<p class="about-body-text">Система лояльности</p>
+								</div>
+								<div class="about-body-item">
+									<img
+										src="./images/icons/discount-icon.svg"
+										alt="Скидка 15%
                             в день рождения"
-								class="about-body-image"
-							/>
-							<p class="about-body-text">Скидка 15% в день рождения</p>
-						</div>
-						<div class="about-body-item">
-							<img
-								src="./images/icons/drinks-icon.svg"
-								alt="Вкусный чай
+										class="about-body-image"
+									/>
+									<p class="about-body-text">Скидка 15% в день рождения</p>
+								</div>
+								<div class="about-body-item">
+									<img
+										src="./images/icons/drinks-icon.svg"
+										alt="Вкусный чай
                             и кофе"
-								class="about-body-image"
-							/>
-							<p class="about-body-text">Вкусный чай и кофе</p>
+										class="about-body-image"
+									/>
+									<p class="about-body-text">Вкусный чай и кофе</p>
+								</div>
+							</div>
+							<!-- ./Общий контейнер для контентной части (картинки и текст) -->
 						</div>
 					</div>
-					<!-- ./Общий контейнер для контентной части (картинки и текст) -->
-				</div>
-			</div>
-		</section>
-		<!-- Верстаем секцию Услуги -->
-		<section class="section-service">
-			<div class="container">
-				<div class="service-content">
-					<h2 class="service-title title">Услуги</h2>
-					<!-- Будущий flex-контейнер -->
-					<div class="service-body">
-						<!--Содержимое (контент) для будущего flex-контейнер -->
-						<div class="service-card">
-							<!--Содержимое (контент) для будущего flex-контейнера для карточки 1 -->
-							<div class="service-card-header">
-								<img src="images/image-card-1.jpg" alt="Наращивание ресниц" />
-							</div>
-							<h3 class="service-card-title">Наращивание ресниц</h3>
-							<div class="service-card-footer">
-								<div class="service-card-price">от 1500₽</div>
-								<a href="#" class="service-card-btn btn">Подробнее</a>
-							</div>
-						</div>
-						<div class="service-card">
-							<!--Содержимое (контент) для будущего flex-контейнера для карточки 2 -->
-							<div class="service-card-header">
-								<img src="images/image-card-2.jpg" alt="Наращивание ресниц" />
-							</div>
-							<h3 class="service-card-title">Коррекция ресниц</h3>
-							<div class="service-card-footer">
-								<div class="service-card-price">от 2000₽</div>
-								<a href="#" class="service-card-btn btn">Подробнее</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- Верстаем секцию Наши Мастера -->
-		<section class="section-workers">
-			<div class="container">
-				<h2 class="workers-title title">Наши мастера</h2>
-				<!-- Обертки для слайдера -->
-				<div class="columns-row">
-					<div class="columns-column">
-						<!-- Flex-контейнер для слайдера -->
-						<div class="column-item item">
-							<!-- Разметка для слайда -->
-							<div class="item-row">
-								<!--Содержимое (контент) для слайда-->
-								<div class="item-image">
-									<img src="images/photo-1.jpg" alt="Анна - LASHMAKER" />
+				</section>
+				<!-- Верстаем секцию Услуги -->
+				<section class="section-service">
+					<div class="container">
+						<div class="service-content">
+							<h2 class="service-title title">Услуги</h2>
+							<!-- Будущий flex-контейнер -->
+							<div class="service-body">
+								<!--Содержимое (контент) для будущего flex-контейнер -->
+								<div class="service-card">
+									<!--Содержимое (контент) для будущего flex-контейнера для карточки 1 -->
+									<div class="service-card-header">
+										<img src="images/image-card-1.jpg" alt="Наращивание ресниц" />
+									</div>
+									<h3 class="service-card-title">Наращивание ресниц</h3>
+									<div class="service-card-footer">
+										<div class="service-card-price">от 1500₽</div>
+										<a href="#" class="service-card-btn btn">Подробнее</a>
+									</div>
 								</div>
-								<div class="item-body">
-									<h3 class="item-body-title">Анна ❘ LASHMAKER</h3>
-									<p class="item-body-text">Сертифицированный мастер по наращиванию ресниц.</p>
-									<p class="item-body-text">Опыт работы: с 2015 года</p>
-									<p class="item-body-text">Образование:<br />Институт инновационных технологий INIT PROFESSIONAL</p>
-									<p class="item-body-text">
-										Участница Международного чемпионата World Lash, II место. Номинация “Absolutely Double Volume”.
-									</p>
-								</div>
-							</div>
-							<div class="item-row">
-								<div class="item-image">
-									<img src="images/photo-2.jpg" alt="Виктория - LASHMAKER" />
-								</div>
-								<div class="item-body">
-									<h3 class="item-body-title">Виктория ❘ LASHMAKER</h3>
-									<p class="item-body-text">Сертифицированный мастер по наращиванию ресниц.</p>
-									<p class="item-body-text">Опыт работы: с 2013 года</p>
-									<p class="item-body-text">Образование:<br />Look&Style (школа Алены Сабановой) Базовая техника “Lash-to-Lash”</p>
-									<p class="item-body-text">Призер Международного чемпионата World Lash - 2015 в номинации “Absolutely Double Volume”.</p>
-								</div>
-							</div>
-							<div class="item-row">
-								<div class="item-image">
-									<img src="images/photo-3.jpg" alt="Юлия - LASHMAKER" />
-								</div>
-								<div class="item-body">
-									<h3 class="item-body-title">Юлия ❘ LASHMAKER</h3>
-									<p class="item-body-text">Сертифицированный мастер по наращиванию ресниц.</p>
-									<p class="item-body-text">Опыт работы: с 2010 года</p>
-									<p class="item-body-text">Образование:<br />Обучающий центр Black Cat “Наращивание ресниц”</p>
-									<p class="item-body-text">
-										Участница Международного чемпионата World Lash, III место. Номинация “Absolutely Double Volume”.
-									</p>
-								</div>
-							</div>
-							<div class="item-row">
-								<div class="item-image">
-									<img src="images/photo-4.jpg" alt="Анастасия - LASHMAKER" />
-								</div>
-								<div class="item-body">
-									<h3 class="item-body-title">Анастасия ❘ LASHMAKER</h3>
-									<p class="item-body-text">Сертифицированный мастер по наращиванию ресниц.</p>
-									<p class="item-body-text">Опыт работы: с 2016 года</p>
-									<p class="item-body-text">Образование:<br />Центр обучения новым технологиям компании Маделон – “Наращивание ресниц”</p>
-									<p class="item-body-text">Призер Международного чемпионата World Lash - 2015 в номинации “Absolutely Double Volume”.</p>
+								<div class="service-card">
+									<!--Содержимое (контент) для будущего flex-контейнера для карточки 2 -->
+									<div class="service-card-header">
+										<img src="images/image-card-2.jpg" alt="Наращивание ресниц" />
+									</div>
+									<h3 class="service-card-title">Коррекция ресниц</h3>
+									<div class="service-card-footer">
+										<div class="service-card-price">от 2000₽</div>
+										<a href="#" class="service-card-btn btn">Подробнее</a>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-		</section>
-		<!-- Верстаем секцию Акции ноября -->
-		<section class="section-actions">
-			<div class="container">
-				<div class="actions-content">
-					<h2 class="actions-title title">Акции ноября</h2>
-					<!-- Будущий flex-контейнер -->
-					<div class="actions-body">
-						<!--Содержимое (контент) для будущего flex-контейнера для карточки 1 -->
-						<div class="actions-card">
-							<div class="actions-card-header actions-card-header_left">
-								<img src="images/actions-image-1.jpg" alt="Первое посещение студии со скидкой" />
-							</div>
-							<h3 class="actions-card-title">Первое посещение студии со скидкой 500 рублей</h3>
-							<div class="actions-card-footer">
-								<div class="actions-card-price">от 1000₽</div>
-								<a href="#" class="actions-card-btn btn">Записаться</a>
+				</section>
+				<!-- Верстаем секцию Наши Мастера -->
+				<section class="section-workers">
+					<div class="container">
+						<h2 class="workers-title title">Наши мастера</h2>
+						<!-- Обертки для слайдера -->
+						<div class="columns-row">
+							<div class="columns-column">
+								<!-- Flex-контейнер для слайдера -->
+								<div class="column-item item">
+									<!-- Разметка для слайда -->
+									<div class="item-row">
+										<!--Содержимое (контент) для слайда-->
+										<div class="item-image">
+											<img src="images/photo-1.jpg" alt="Анна - LASHMAKER" />
+										</div>
+										<div class="item-body">
+											<h3 class="item-body-title">Анна ❘ LASHMAKER</h3>
+											<p class="item-body-text">Сертифицированный мастер по наращиванию ресниц.</p>
+											<p class="item-body-text">Опыт работы: с 2015 года</p>
+											<p class="item-body-text">Образование:<br />Институт инновационных технологий INIT PROFESSIONAL</p>
+											<p class="item-body-text">
+												Участница Международного чемпионата World Lash, II место. Номинация “Absolutely Double Volume”.
+											</p>
+										</div>
+									</div>
+									<div class="item-row">
+										<div class="item-image">
+											<img src="images/photo-2.jpg" alt="Виктория - LASHMAKER" />
+										</div>
+										<div class="item-body">
+											<h3 class="item-body-title">Виктория ❘ LASHMAKER</h3>
+											<p class="item-body-text">Сертифицированный мастер по наращиванию ресниц.</p>
+											<p class="item-body-text">Опыт работы: с 2013 года</p>
+											<p class="item-body-text">Образование:<br />Look&Style (школа Алены Сабановой) Базовая техника “Lash-to-Lash”</p>
+											<p class="item-body-text">
+												Призер Международного чемпионата World Lash - 2015 в номинации “Absolutely Double Volume”.
+											</p>
+										</div>
+									</div>
+									<div class="item-row">
+										<div class="item-image">
+											<img src="images/photo-3.jpg" alt="Юлия - LASHMAKER" />
+										</div>
+										<div class="item-body">
+											<h3 class="item-body-title">Юлия ❘ LASHMAKER</h3>
+											<p class="item-body-text">Сертифицированный мастер по наращиванию ресниц.</p>
+											<p class="item-body-text">Опыт работы: с 2010 года</p>
+											<p class="item-body-text">Образование:<br />Обучающий центр Black Cat “Наращивание ресниц”</p>
+											<p class="item-body-text">
+												Участница Международного чемпионата World Lash, III место. Номинация “Absolutely Double Volume”.
+											</p>
+										</div>
+									</div>
+									<div class="item-row">
+										<div class="item-image">
+											<img src="images/photo-4.jpg" alt="Анастасия - LASHMAKER" />
+										</div>
+										<div class="item-body">
+											<h3 class="item-body-title">Анастасия ❘ LASHMAKER</h3>
+											<p class="item-body-text">Сертифицированный мастер по наращиванию ресниц.</p>
+											<p class="item-body-text">Опыт работы: с 2016 года</p>
+											<p class="item-body-text">
+												Образование:<br />Центр обучения новым технологиям компании Маделон – “Наращивание ресниц”
+											</p>
+											<p class="item-body-text">
+												Призер Международного чемпионата World Lash - 2015 в номинации “Absolutely Double Volume”.
+											</p>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
-						<!--Содержимое (контент) для будущего flex-контейнера для карточки 2 -->
-						<div class="actions-card">
-							<div class="actions-card-header actions-card-header_right">
-								<img src="images/actions-image-2.jpg" alt="Наращивание 2D ресниц за 2000 рублей" />
-							</div>
-							<h3 class="actions-card-title actions-card-title_indent">Наращивание 2D ресниц за&nbsp;2000 рублей вмето 2600</h3>
-							<div class="actions-card-footer">
-								<div class="actions-card-price actions-card-price_fix">2000₽</div>
-								<a href="#" class="actions-card-btn btn">Записаться</a>
+					</div>
+				</section>
+				<!-- Верстаем секцию Акции ноября -->
+				<section class="section-actions">
+					<div class="container">
+						<div class="actions-content">
+							<h2 class="actions-title title">Акции ноября</h2>
+							<!-- Будущий flex-контейнер -->
+							<div class="actions-body">
+								<!--Содержимое (контент) для будущего flex-контейнера для карточки 1 -->
+								<div class="actions-card">
+									<div class="actions-card-header actions-card-header_left">
+										<img src="images/actions-image-1.jpg" alt="Первое посещение студии со скидкой" />
+									</div>
+									<h3 class="actions-card-title">Первое посещение студии со скидкой 500 рублей</h3>
+									<div class="actions-card-footer">
+										<div class="actions-card-price">от 1000₽</div>
+										<a href="#" class="actions-card-btn btn">Записаться</a>
+									</div>
+								</div>
+								<!--Содержимое (контент) для будущего flex-контейнера для карточки 2 -->
+								<div class="actions-card">
+									<div class="actions-card-header actions-card-header_right">
+										<img src="images/actions-image-2.jpg" alt="Наращивание 2D ресниц за 2000 рублей" />
+									</div>
+									<h3 class="actions-card-title actions-card-title_indent">Наращивание 2D ресниц за&nbsp;2000 рублей вмето 2600</h3>
+									<div class="actions-card-footer">
+										<div class="actions-card-price actions-card-price_fix">2000₽</div>
+										<a href="#" class="actions-card-btn btn">Записаться</a>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-		</section>
-		<!-- Верстаем секцию Контакты -->
-		<section class="section-contacts">
-			<div class="container">
-				<!--Заголовок  -->
-				<h2 class="contacts-title title">Контакты</h2>
-				<!-- Контейнер для контентной части -->
-				<div class="contacts-body">
-					<!-- Контентная часть -->
-					<div class="contacts-body-list">
-						<ul class="contacts-list">
-							<li class="contacts-item">Режим работы:</li>
-							<li class="contacts-item">пн-пт с 10.00 до 22.00</li>
-							<li class="contacts-item">сб-вс с 8.00 до 23.00</li>
-							<li class="contacts-item">Телефон:</li>
-							<li class="contacts-item">+7 (495) 998-21-38</li>
-						</ul>
-					</div>
-					<div class="contacts-body-list ml">
-						<ul class="contacts-list">
-							<li class="contacts-item">Адреса:</li>
-							<li class="contacts-item">м. Беговая, Ходынская улица 57, офис 207, 2 этаж</li>
-							<li class="contacts-item">м. Рижская, Туритская улица, офис 308, 3 этаж</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- Верстаем секцию footer -->
-		<footer class="footer">
-			<!-- Ограничивающий контейнер -->
-			<div class="footer-container">
-				<!-- контейнер на случай выравнивания блоков с контентом футера -->
-				<div class="footer-content">
-					<!-- Тело футера (будущий флекс-контейнер) -->
-					<div class="footer-body">
-						<!-- Контент делим на три контейнера - флекс-элемента -->
-						<div class="footer-item">
-							<!-- Контент с контактами и соц.сетями -->
-							<p class="footer-contacts">Телефон для записи: <a href="tel:74959982138">+7 (495) 998-21-38</a></p>
-							<div class="footer-socials">
-								<p class="footer-contacts">Наши соц. сети:</p>
-								<!-- Контент с картиками-ссылками соцсетей (сделано писком для удобства верстки)-->
-								<ul class="footer-list">
-									<li class="footer-list-item">
-										<a href="#" class="footer-link insta"></a>
-									</li>
-									<li class="footer-list-item"><a href="#" class="footer-link fb"></a></li>
-									<li class="footer-list-item"><a href="#" class="footer-link vk"></a></li>
+				</section>
+				<!-- Верстаем секцию Контакты -->
+				<section class="section-contacts">
+					<div class="container">
+						<!--Заголовок  -->
+						<h2 class="contacts-title title">Контакты</h2>
+						<!-- Контейнер для контентной части -->
+						<div class="contacts-body">
+							<!-- Контентная часть -->
+							<div class="contacts-body-list">
+								<ul class="contacts-list">
+									<li class="contacts-item">Режим работы:</li>
+									<li class="contacts-item">пн-пт с 10.00 до 22.00</li>
+									<li class="contacts-item">сб-вс с 8.00 до 23.00</li>
+									<li class="contacts-item">Телефон:</li>
+									<li class="contacts-item">+7 (495) 998-21-38</li>
+								</ul>
+							</div>
+							<div class="contacts-body-list ml">
+								<ul class="contacts-list">
+									<li class="contacts-item">Адреса:</li>
+									<li class="contacts-item">м. Беговая, Ходынская улица 57, офис 207, 2 этаж</li>
+									<li class="contacts-item">м. Рижская, Туритская улица, офис 308, 3 этаж</li>
 								</ul>
 							</div>
 						</div>
-						<!-- Контент с логотипом -->
-						<div class="footer-item">
-							<a href="#" class="footer-logo-link">
-								<!-- логотип + текст логотипа -->
-								<p class="footer-logo">AllinLashes</p>
-								<p class="footer-text">Студия наращивания ресниц</p>
-								<!-- ./логотип + текст логотипа -->
-							</a>
-						</div>
-						<!-- Контент с адресами-->
-						<div class="footer-item">
-							<p class="footer-contacts footer-address">м. Беговая, Ходынская улица 57, офис 207, 2 этаж</p>
-							<p class="footer-contacts footer-address">м. Рижская, Туритская улица 10, офис 308, 3 этаж</p>
+					</div>
+				</section>
+				<!-- Верстаем секцию footer -->
+			</main>
+			<footer class="footer">
+				<!-- Ограничивающий контейнер -->
+				<div class="footer-container">
+					<!-- контейнер на случай выравнивания блоков с контентом футера -->
+					<div class="footer-content">
+						<!-- Тело футера (будущий флекс-контейнер) -->
+						<div class="footer-body">
+							<!-- Контент делим на три контейнера - флекс-элемента -->
+							<div class="footer-item">
+								<!-- Контент с контактами и соц.сетями -->
+								<p class="footer-contacts">Телефон для записи: <a href="tel:74959982138">+7 (495) 998-21-38</a></p>
+								<div class="footer-socials">
+									<p class="footer-contacts">Наши соц. сети:</p>
+									<!-- Контент с картиками-ссылками соцсетей (сделано писком для удобства верстки)-->
+									<ul class="footer-list">
+										<li class="footer-list-item">
+											<a href="#" class="footer-link insta"></a>
+										</li>
+										<li class="footer-list-item"><a href="#" class="footer-link fb"></a></li>
+										<li class="footer-list-item"><a href="#" class="footer-link vk"></a></li>
+									</ul>
+								</div>
+							</div>
+							<!-- Контент с логотипом -->
+							<div class="footer-item">
+								<a href="#" class="footer-logo-link">
+									<!-- логотип + текст логотипа -->
+									<p class="footer-logo">AllinLashes</p>
+									<p class="footer-text">Студия наращивания ресниц</p>
+									<!-- ./логотип + текст логотипа -->
+								</a>
+							</div>
+							<!-- Контент с адресами-->
+							<div class="footer-item">
+								<p class="footer-contacts footer-address">м. Беговая, Ходынская улица 57, офис 207, 2 этаж</p>
+								<p class="footer-contacts footer-address">м. Рижская, Туритская улица 10, офис 308, 3 этаж</p>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</footer>
+			</footer>
+		</div>
+
 		<!-- Подключаем библиотеку JQuery для работы слайдера -->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<!-- Подключаем библиотеку Slick Slider для работы слайдера -->
