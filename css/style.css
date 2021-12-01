@@ -481,10 +481,13 @@ img {
 	position: relative;
 }
 
+.columns-column {
+	position: relative !important;
+}
 
 /* Для слайдера тоже используем flex */
 .item {
-	position: relative !important;
+	
 	display: flex;
 	align-items: center;
 	z-index: 1;
