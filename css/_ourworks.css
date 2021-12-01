@@ -1,9 +1,49 @@
+/* Для главной страницы и страницы "Наши работы" делаем стили для прижатия футера к низу страницы (необходимо для того, чтобы футер не висел в середине, к примеру, страницы при варианте, если высота контентной части меньше, чем высота разрешения экрана пользователя) 
+В разметке добавлены блоки с классами page-wrapper (общая обертка для всего контента), блок main (обертка для контента, за исключением хедера и футера)
+
+Для тега html задаем высоту 100%
+
+Задаем грид для общего контейнера
+.page-wrapper {
+	overflow: hidden;
+	display: grid;
+	grid-template-rows: 1fr auto;
+	width: 100%;
+	min-height: 100%;
+}
+
+И для футера задаем ограничения, позволяющие ему оставаться прижатым к самому низу
+.footer {
+	grid-row-start: 2;
+	grid-row-end: 3;
+	
+}
+
+*/
+
 .our-works {
 	position: relative;
 	padding-top: 164px;
 	padding-bottom: 57px;
 }
 
+/* Стилизуем ссылки меню. Св-во transition: color 0.3s ease-in; делает изменение цвета текста при наведении более плавным */
+.header-link {
+	font-size: 35px;
+	line-height: 74.24%;
+	text-align: center;
+	letter-spacing: 0.025em;
+	color: #000;
+	transition: color 0.3s ease-in;
+	cursor: pointer;
+}
+
+/* Добавляем эффект при наведении на ссылку меню */
+.header-link:hover {
+	color: #ce8272;
+}
+
+/* Стили для главного заголовка страницы */
 .our-works-title {
 	font-family: Philosopher;
 	font-weight: 400;
@@ -14,23 +54,19 @@
 	color: #000000;
 }
 
+/* Задаем обертке слайдера позицию inherit (наследование) от тега body, т.к. стреловки слайдера по макету располагаются вне ограничивающего контейнера (.container). Св-во !important служит для задания авторского стиля, в том случае, если возникают противоречия с остальными стилями */
 .slick-slider {
 	position: inherit !important;
 }
 
-.slider {
-	/* position: relative; */
-}
-
-.our-works-slider {
-}
+/* Задаем грид для общего грид-контейнера, делаем две строки для картрнки (шириной 335рх) и блока с текстом (1fr - единица длины fr представляет собой долю (fraction) доступного пространства в грид-контейнере) */
 .our-works-slider-body {
 	display: grid;
 	grid-template-rows: 335px 1fr;
 	row-gap: 57px;
 }
-.slider-works {
-}
+
+/* Задаем грид контейнер для первого (верхнего) блока слайдера, св-во gap - служит для задания внутренних отступов между колонками и рядами */
 .slider-works-row {
 	display: grid;
 	grid-template-rows: 335px;
@@ -38,16 +74,22 @@
 	background: #fae6df;
 	gap: 0;
 }
+
+/* Стили для картинки */
 .slider-works-image img {
 	max-width: 100%;
 	height: 335px;
 	width: 345px;
 }
+
+/* Стили для коннтента (текстового блока) */
 .slider-works-content {
 	padding-top: 50px;
 	padding-bottom: 113px;
 	padding-left: 17px;
 }
+
+/* Стили текста заголовка первого блока слайдера */
 .slider-works-title {
 	font-family: "Tinos";
 	font-weight: 700;
@@ -57,6 +99,8 @@
 	color: #000;
 	padding-bottom: 27px;
 }
+
+/* Стили для текста первого блока */
 .slider-works-text {
 	font-size: 30px;
 	line-height: 133%;
@@ -65,33 +109,41 @@
 	width: 780px;
 }
 
+/* Задаем грид для второго блока (нижнего) слайдера - задаем стили для рамки */
 .slider-works-row-feedback {
 	display: grid;
-	/* grid-template-columns: 345px 1fr; */
 	border: 2px solid #ce8272;
 	box-sizing: border-box;
 	border-radius: 120px;
 }
 
+/* Грид стили для внутреннего контента второго (нижнего) блока слайдера, задаем ширину в 1fr для ряда и для колонок 240px 1fr 1fr */
 .row-feedback {
 	display: grid;
 	grid-template-rows: 1fr;
 	grid-template-columns: 240px 1fr 1fr;
 }
+
+/* Стили для блока картинки */
 .slider-works-row-feedback-image {
 	margin: 46px 0 48px 107px;
 	width: 104px;
 	height: 104px;
 }
 
+/* Стили для картинки */
 .slider-works-row-feedback-image img {
 	max-width: 100%;
 	width: 104px;
 	height: 104px;
 }
+
+/* Ограничиваем контентную части с текстом */
 .slider-works-row-feedback-content {
 	min-width: 930px;
 }
+
+/* Стили для заголовка нижнего блока слайдера */
 .slider-works-row-feedback-title_m {
 	text-align: center;
 	padding-top: 19px;
@@ -103,6 +155,7 @@
 	color: #000;
 }
 
+/* Стили для заголовка нижнего блока слайдера */
 .slider-works-row-feedback-title {
 	font-weight: 700;
 	font-size: 30px;
@@ -111,6 +164,8 @@
 	color: #000;
 	padding-bottom: 12px;
 }
+
+/* Стили для текста нижнего блока слайдера */
 .slider-works-row-feedback-text {
 	font-size: 25px;
 	line-height: 100%;
@@ -120,7 +175,7 @@
 }
 
 /* Стрелочка вперед для слайдера позиционируем абсолютно (абсолютно родителя, которому мы выше задавали position:relative, чтобы стрелочки слайдера находились в нужном для нас контейнере, их мы позиционируем, в данном случае, св-вами top: 50%; right: 23px;) */
-.slick-next {
+.slider .slick-next {
 	position: absolute;
 	background-color: transparent;
 	border: none;
@@ -129,7 +184,7 @@
 	background-size: 50px 70px;
 	background-position: center;
 	top: 45%;
-	right: 180px;
+	right: 10%;
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
@@ -146,7 +201,7 @@
 }
 
 /* Стрелочка назад для слайдера позиционируем абсолютно (абсолютно родителя, которому мы выше задавали position:relative, чтобы стрелочки слайдера находились в нужном для нас контейнере, их мы позиционируем, в данном случае, св-вами top: 50%; right: 23px;) */
-.slick-prev {
+.slider .slick-prev {
 	position: absolute;
 	background-color: transparent;
 	border: none;
@@ -155,7 +210,7 @@
 	background-size: 50px 70px;
 	background-position: center;
 	top: 45%;
-	left: 180px;
+	left: 10%;
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
@@ -171,6 +226,7 @@
 	z-index: 999;
 }
 
+/* Делаем точки под слайдером, флексом выравниваем их в ряд и выставляем по центру с помощью св-ва justify-content: center; Выставляем внутренние отступы */
 .slick-dots {
 	display: flex !important;
 	list-style-type: none;
@@ -180,10 +236,13 @@
 	cursor: pointer;
 }
 
+/* Меняем цвет и прозрачность активной точки */
 .slick-dots > li.slick-active {
 	background: #ce8272;
 	opacity: 1;
 }
+
+/* Задаем цвет и прозрачность у остальных точек, делаем их круглыми */
 .slick-dots > li {
 	width: 8px;
 	height: 8px;

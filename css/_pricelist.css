@@ -1,0 +1,147 @@
+/* Стили для главного заголовка страницы */
+.prise {
+	margin-top: 170px;
+}
+
+.price-title {
+	font-family: Philosopher;
+	font-weight: 400;
+	font-size: 60px;
+	line-height: 100%;
+	padding-top: 170px;
+	margin-bottom: 58px;
+	letter-spacing: 0.025em;
+	color: #000;
+	margin-bottom: 122px;
+}
+
+.price-table {
+	padding-bottom: 12px;
+}
+.price-table-list {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	font-family: Tinos;
+	font-weight: 400;
+	font-size: 35px;
+	line-height: 108.24%;
+	text-align: center;
+	letter-spacing: 0.025em;
+	color: #000;
+}
+.price-table-item {
+	padding-right: 118px;
+}
+
+.accordion-body {
+	padding: 0;
+}
+
+.accordion {
+	padding-bottom: 184px;
+}
+
+.accordion-button {
+	color: #000;
+}
+
+.accordion-item {
+	background-color: transparent;
+	border: none;
+}
+
+.accordion-item:not(:last-child) {
+	margin-bottom: 36px;
+}
+
+.accordion-body {
+	background-color: transparent;
+	border-top: 2px solid #01555f;
+	margin-top: 18px;
+}
+
+.accordion-body-list {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 30px;
+	padding: 26px 120px 26px 20px;
+	background: rgba(1, 85, 95, 0.05);
+	border: 1px solid #01555f;
+	margin-bottom: 30px;
+	font-family: Tinos;
+	font-weight: 400;
+	font-size: 35px;
+	line-height: 108.24%;
+	letter-spacing: 0.025em;
+	color: #000000;
+}
+
+.accordion-body-list:focus {
+	border: 2px solid red;
+}
+
+.accordion-body-list li:not(:last-child) {
+	padding-right: 130px;
+}
+
+.accordion-body-list li:first-child {
+	flex: 1 1 auto;
+	max-width: 566px;
+	padding-right: 0px;
+}
+
+.accordion-body-item span {
+	font-family: Philosopher;
+	font-weight: 400;
+	font-size: 35px;
+	line-height: 171%;
+	text-align: center;
+	letter-spacing: 0.025em;
+	color: #01555f;
+}
+
+.accordion-button:not(.collapsed) {
+	color: #000000;
+	background: rgba(1, 85, 95, 0.05);
+	box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+}
+
+.accordion-button:not(.collapsed)::after {
+	display: none;
+}
+
+.accordion-button::after {
+	display: none;
+}
+
+.accordion-button {
+	font-family: Tinos;
+	font-weight: 400;
+	font-size: 35px;
+	line-height: 108.24%;
+	padding: 21px 0px 21px 27px;
+	text-align: center;
+	letter-spacing: 0.025em;
+	background: rgba(1, 85, 95, 0.05);
+	color: #000;
+}
+
+.accordion-button:not(.collapsed)::before {
+	transform: rotate(180deg);
+}
+
+.accordion-button::before {
+	flex-shrink: 0;
+	transform: rotate(0deg);
+	width: 40px;
+	height: 40px;
+	margin-right: 48px;
+	padding-left: 27px;
+	content: "";
+	background-image: url("../images/price/price-arrow.svg");
+	background-repeat: no-repeat;
+	background-size: 40px;
+	transition: transform 0.2s ease-in-out;
+}

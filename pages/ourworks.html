@@ -33,7 +33,7 @@
 				<div class="header-content header-container">
 					<!-- header-content состоит из двух элементов (в будущем flexbox-элементов) - header-body и header-nav. Весь header-body обернут в тег а (ссылка): будет кликабелен и вести на главную страницу сайта -->
 					<div class="header-body">
-						<a href="#" class="header-logo-link">
+						<a href="../index.html" class="header-logo-link">
 							<!-- логотип + текст логотипа -->
 							<p class="header-logo">AllinLashes</p>
 							<p class="header-text">Студия наращивания ресниц</p>
@@ -43,7 +43,7 @@
 					<!-- Описание навигации сайта. Делаем его списком -->
 					<nav class="header-nav">
 						<ul class="header-list">
-							<li class="header-item"><a href="#" class="header-link">Услуги и прайс</a></li>
+							<li class="header-item"><a href="./pricelist.html" class="header-link">Услуги и прайс</a></li>
 							<li class="header-item"><a href="#" class="header-link">Наши работы</a></li>
 							<li class="header-item"><a href="#" class="header-link">Онлайн запись</a></li>
 						</ul>
@@ -51,97 +51,121 @@
 				</div>
 			</header>
 			<!-- ./Делаем шапку сайта с навигацией -->
+			<!-- Блок main (нужен для семантики в верстке), включающий всю контентную часть страницы -->
 			<main class="main-page">
+				<!-- Секция для контента -->
 				<section class="our-works">
+					<!-- Ограничивающий контейнер -->
 					<div class="container">
-						<h1 class="our-works-title title">Наши работы</h2>
-                            <div class="slider">
-                                <div class="our-works-slider">
-                                    <div class="our-works-slider-body slider-works">
-                                        <div class="slider-works-row">
-                                            <div class="slider-works-image">
-                                                <img src="../images/our-works/image-1.jpg" alt="Наращивание уголков">
-                                            </div>
-                                            <div class="slider-works-content">
-                                                <h3 class="slider-works-title">Наращивание уголков</h3>
-                                                <p class="slider-works-text">Когда нет необходимости наращивать каждую ресничку, 
-                                                    но очень хочется подчеркнуть природную красоту глаз, 
-                                                    то можно сделать наращивание уголков ресниц.</p>
-                                            </div>
-                                        </div>
-                                        <div class="slider-works-row-feedback">
-                                           <div class="row-feedback">
-                                            <div class="slider-works-row-feedback-image">
-                                                <img src="../images/our-works/avatar-1.png" alt="Эмилия">
-                                            </div>
-                                            <div class="slider-works-row-feedback-content">
-                                                <h3 class="slider-works-row-feedback-title_m">Отзыв:</h3>
-                                                <h3 class="slider-works-row-feedback-title">Эмилия</h3>
-                                                <p class="slider-works-row-feedback-text">Мы вместе с мамой наращиваем реснички в этой чудесной студии! Обе довольны!
-                                                    Приходите обязательно к девочкам и у вас будут самые красивые реснички!</p>
-                                            </div>
-                                           </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="our-works-slider">
-                                    <div class="our-works-slider-body slider-works">
-                                        <div class="slider-works-row">
-                                            <div class="slider-works-image">
-                                                <img src="../images/our-works/image-2.jpg" alt="Наращивание уголков">
-                                            </div>
-                                            <div class="slider-works-content">
-                                                <h3 class="slider-works-title">Наращивание ресниц 1D</h3>
-                                                <p class="slider-works-text">При таком способе наращивания ресницы смотрятся, 
-                                                    как накрашенные тушью – выразительно и естественно. 
-                                                    Подойдет обладательницам нормальных и густых ресниц 
-                                                    и тем, кто любит натуральный образ. </p>
-                                            </div>
-                                        </div>
-                                        <div class="slider-works-row-feedback">
-                                           <div class="row-feedback">
-                                            <div class="slider-works-row-feedback-image">
-                                                <img src="../images/our-works/avatar-2.png" alt="Эмилия">
-                                            </div>
-                                            <div class="slider-works-row-feedback-content">
-                                                <h3 class="slider-works-row-feedback-title_m">Отзыв:</h3>
-                                                <h3 class="slider-works-row-feedback-title">Вероника</h3>
-                                                <p class="slider-works-row-feedback-text">Очень рада, что попала именно к вам! Реснички мои выглядят очень натурально, все замечают изменения, но никто не догадывается, в чем именно дело. Супер!</p>
-                                            </div>
-                                           </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="our-works-slider">
-                                    <div class="our-works-slider-body slider-works">
-                                        <div class="slider-works-row">
-                                            <div class="slider-works-image">
-                                                <img src="../images/our-works/image-3.jpg" alt="Наращивание уголков">
-                                            </div>
-                                            <div class="slider-works-content">
-                                                <h3 class="slider-works-title">Наращивание ресниц 2D</h3>
-                                                <p class="slider-works-text">Наращивание ресниц 2D - техника, позволяющая добиться
-                                                    максимально выразительного взгляда без ущерба естественности.
-                                                    Этот вариант обладает всеми достоинствами классики, но делает 
-                                                    при этом реснички более густыми, объемными и пушистыми. </p>
-                                            </div>
-                                        </div>
-                                        <div class="slider-works-row-feedback">
-                                           <div class="row-feedback">
-                                            <div class="slider-works-row-feedback-image">
-                                                <img src="../images/our-works/avatar-3.png" alt="Эмилия">
-                                            </div>
-                                            <div class="slider-works-row-feedback-content">
-                                                <h3 class="slider-works-row-feedback-title_m">Отзыв:</h3>
-                                                <h3 class="slider-works-row-feedback-title">Мария</h3>
-                                                <p class="slider-works-row-feedback-text">Благодарю Анну за свой естественный взгляд! Реснички выглядят натурально.
-                                                    Теперь я каждое утро просыпаюсь красивой и никуда не опаздываю! Обязательно вернусь! </p>
-                                            </div>
-                                           </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+						<!-- Главный заголовок страницы -->
+						<h1 class="our-works-title title">Наши работы</h1>
+						<!-- Тег-обертка для слайдера -->
+						<div class="slider">
+							<!-- Общий грид контейнер для всей контентной части слайдера, исключая главный заголовок (первый слайд)-->
+							<div class="our-works-slider">
+								<!-- Общий грид контейнер для всей контентной части слайдера, исключая главный заголовок -->
+								<div class="our-works-slider-body slider-works">
+									<!-- Грид контейнер для  контентной части слайдера для верхнего блока -->
+									<div class="slider-works-row">
+										<!-- Контент для верхнего блока слайдера, текст и картинка -->
+										<div class="slider-works-image">
+											<img src="../images/our-works/image-1.jpg" alt="Наращивание уголков" />
+										</div>
+										<!-- Контент для верхнего блока слайдера, текст и картинка -->
+										<div class="slider-works-content">
+											<h3 class="slider-works-title">Наращивание уголков</h3>
+											<p class="slider-works-text">
+												Когда нет необходимости наращивать каждую ресничку, но очень хочется подчеркнуть природную красоту глаз, то можно
+												сделать наращивание уголков ресниц.
+											</p>
+										</div>
+									</div>
+									<!-- Грид контейнер для нижнего блока слайдера (для задания цветной закругленной рамки) -->
+									<div class="slider-works-row-feedback">
+										<!-- Отдельный грид контейнер для нижнего блока слайдера -->
+										<div class="row-feedback">
+											<!-- Блок для контентной части нижнего блока слайдера: текст отзыва + картика-аватарка -->
+											<div class="slider-works-row-feedback-image">
+												<img src="../images/our-works/avatar-1.png" alt="Эмилия" />
+											</div>
+											<div class="slider-works-row-feedback-content">
+												<h3 class="slider-works-row-feedback-title_m">Отзыв:</h3>
+												<h3 class="slider-works-row-feedback-title">Эмилия</h3>
+												<p class="slider-works-row-feedback-text">
+													Мы вместе с мамой наращиваем реснички в этой чудесной студии! Обе довольны! Приходите обязательно к девочкам и у
+													вас будут самые красивые реснички!
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Общий грид контейнер для всей контентной части слайдера, исключая главный заголовок (второй слайд). Ниже все тоже самое, что и для первого слайда-->
+							<div class="our-works-slider">
+								<div class="our-works-slider-body slider-works">
+									<div class="slider-works-row">
+										<div class="slider-works-image">
+											<img src="../images/our-works/image-2.jpg" alt="Наращивание уголков" />
+										</div>
+										<div class="slider-works-content">
+											<h3 class="slider-works-title">Наращивание ресниц 1D</h3>
+											<p class="slider-works-text">
+												При таком способе наращивания ресницы смотрятся, как накрашенные тушью – выразительно и естественно. Подойдет
+												обладательницам нормальных и густых ресниц и тем, кто любит натуральный образ.
+											</p>
+										</div>
+									</div>
+									<div class="slider-works-row-feedback">
+										<div class="row-feedback">
+											<div class="slider-works-row-feedback-image">
+												<img src="../images/our-works/avatar-2.png" alt="Эмилия" />
+											</div>
+											<div class="slider-works-row-feedback-content">
+												<h3 class="slider-works-row-feedback-title_m">Отзыв:</h3>
+												<h3 class="slider-works-row-feedback-title">Вероника</h3>
+												<p class="slider-works-row-feedback-text">
+													Очень рада, что попала именно к вам! Реснички мои выглядят очень натурально, все замечают изменения, но никто не
+													догадывается, в чем именно дело. Супер!
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Общий грид контейнер для всей контентной части слайдера, исключая главный заголовок (третий слайд). Ниже все тоже самое, что и для первого слайда-->
+							<div class="our-works-slider">
+								<div class="our-works-slider-body slider-works">
+									<div class="slider-works-row">
+										<div class="slider-works-image">
+											<img src="../images/our-works/image-3.jpg" alt="Наращивание уголков" />
+										</div>
+										<div class="slider-works-content">
+											<h3 class="slider-works-title">Наращивание ресниц 2D</h3>
+											<p class="slider-works-text">
+												Наращивание ресниц 2D - техника, позволяющая добиться максимально выразительного взгляда без ущерба естественности.
+												Этот вариант обладает всеми достоинствами классики, но делает при этом реснички более густыми, объемными и
+												пушистыми.
+											</p>
+										</div>
+									</div>
+									<div class="slider-works-row-feedback">
+										<div class="row-feedback">
+											<div class="slider-works-row-feedback-image">
+												<img src="../images/our-works/avatar-3.png" alt="Эмилия" />
+											</div>
+											<div class="slider-works-row-feedback-content">
+												<h3 class="slider-works-row-feedback-title_m">Отзыв:</h3>
+												<h3 class="slider-works-row-feedback-title">Мария</h3>
+												<p class="slider-works-row-feedback-text">
+													Благодарю Анну за свой естественный взгляд! Реснички выглядят натурально. Теперь я каждое утро просыпаюсь красивой
+													и никуда не опаздываю! Обязательно вернусь!
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</section>
 			</main>
@@ -171,7 +195,7 @@
 							</div>
 							<!-- Контент с логотипом -->
 							<div class="footer-item">
-								<a href="#" class="footer-logo-link">
+								<a href="../index.html" class="footer-logo-link">
 									<!-- логотип + текст логотипа -->
 									<p class="footer-logo">AllinLashes</p>
 									<p class="footer-text">Студия наращивания ресниц</p>
@@ -194,7 +218,7 @@
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 		<!-- Подключаем скрипты (если потребуется) -->
 		<script src="js/script.js"></script>
-		<!-- Код для работы слайдера, в качестве параметра задается класс .item (там, где находится контент для слайдера) -->
+		<!-- Код для работы слайдера, в качестве параметра задается класс .slider (там, где находится контент для слайдера) -->
 		<script>
 			$(".slider").slick({
 				dots: true,

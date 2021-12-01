@@ -1,5 +1,30 @@
+/* Для главной страницы и страницы "Наши работы" делаем стили для прижатия футера к низу страницы (необходимо для того, чтобы футер не висел в середине, к примеру, страницы при варианте, если высота контентной части меньше, чем высота разрешения экрана пользователя) 
+В разметке добавлены блоки с классами page-wrapper (общая обертка для всего контента), блок main (обертка для контента, за исключением хедера и футера)
+
+Для тега html задаем высоту 100%
+
+Задаем грид для общего контейнера
+.page-wrapper {
+	overflow: hidden;
+	display: grid;
+	grid-template-rows: 1fr auto;
+	width: 100%;
+	min-height: 100%;
+}
+
+И для футера задаем ограничения, позволяющие ему оставаться прижатым к самому низу
+.footer {
+	grid-row-start: 2;
+	grid-row-end: 3;
+	
+}
+
+*/
+
 /* ========================================================== */
 /* Общие стили, обнуляющие стандартные стили, которые задаются по умолчанию браузером */
+@import "./_ourworks";
+@import "./_pricelist";
 
 html {
 	box-sizing: border-box;
@@ -17,10 +42,9 @@ body {
 	font-family: "Tinos", sans-serif;
 	font-weight: 400;
 	margin: 0;
-	background-image: url("/images/bg.jpg");
-	background-repeat: repeat;
+	background-image: url("../images/bg.jpg");
+	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: top;
 	z-index: -1;
 	width: 100%;
 	height: 100%;
@@ -76,8 +100,6 @@ img {
 
 .page-wrapper {
 	overflow: hidden;
-	/* display: flex;
-	flex-direction: column; */
 	display: grid;
 	grid-template-rows: 1fr auto;
 	width: 100%;
@@ -99,6 +121,8 @@ img {
 	left: 0;
 	right: 0;
 	background-color: rgba(250, 223, 214, 0.7);
+	/* св-во для вывода на передний план ссылок и заголовка сайта (чтобы наверняка работали ховеры и ссылки) */
+	z-index: 999;
 }
 
 /* Ограничиваем контент по ширине и делаем его по центру сайта - margin: 0 auto; + делаем отступы безопасности - padding: 0 15px; для того, чтобы контент при изменении ширины экрана не прилипал к его краям */
@@ -188,7 +212,7 @@ img {
 	background-color: rgba(229, 229, 229, 0.02);
 	padding-top: 360px;
 	padding-bottom: 203px;
-	z-index: -1;
+	z-index: 1;
 }
 
 /* Ограничивающий контейнер. Он отличается по макету от контейнера шапки сайта, поэтому задаем отдельно */
@@ -257,6 +281,7 @@ img {
 	border-radius: 123.556px;
 	transition: all 0.3s ease-in;
 	cursor: pointer;
+	z-index: 9999;
 }
 
 /* Ховер-эффект для кнопки */
@@ -264,6 +289,7 @@ img {
 	background: rgba(1, 85, 95, 0.2);
 	border: 2px solid #01555f;
 	border-radius: 123.556px;
+	z-index: 9999;
 }
 
 /* Стилизуем картинку. Задаем ширину и высоту. z-index: 1 позволяет управлять отображением элементов по оси z. В данном случае картинка будет поверх рамки, стили которой описаны ниже */
@@ -841,205 +867,4 @@ img {
 
 .fb:hover {
 	background-image: url("../images/icons/fb-hover.png");
-}
-
-
-
-/* page our-works */
-
-.our-works {
-	position: relative;
-	padding-top: 164px;
-	padding-bottom: 57px;
-}
-
-.our-works-title {
-	font-family: Philosopher;
-	font-weight: 400;
-	font-size: 60px;
-	line-height: 100%;
-	margin-bottom: 58px;
-	letter-spacing: 0.025em;
-	color: #000000;
-}
-
-.slick-slider {
-	position: inherit !important;
-}
-
-.slider {
-	/* position: relative; */
-}
-
-.our-works-slider {
-}
-.our-works-slider-body {
-	display: grid;
-	grid-template-rows: 335px 1fr;
-	row-gap: 57px;
-}
-.slider-works {
-}
-.slider-works-row {
-	display: grid;
-	grid-template-rows: 335px;
-	grid-template-columns: 345px 1fr;
-	background: #fae6df;
-	gap: 0;
-}
-.slider-works-image img {
-	max-width: 100%;
-	height: 335px;
-	width: 345px;
-}
-.slider-works-content {
-	padding-top: 50px;
-	padding-bottom: 113px;
-	padding-left: 17px;
-}
-.slider-works-title {
-	font-family: "Tinos";
-	font-weight: 700;
-	font-size: 35px;
-	line-height: 74.24%;
-	letter-spacing: 0.025em;
-	color: #000;
-	padding-bottom: 27px;
-}
-.slider-works-text {
-	font-size: 30px;
-	line-height: 133%;
-	letter-spacing: 0.025em;
-	color: #000000;
-	width: 780px;
-}
-
-.slider-works-row-feedback {
-	display: grid;
-	/* grid-template-columns: 345px 1fr; */
-	border: 2px solid #ce8272;
-	box-sizing: border-box;
-	border-radius: 120px;
-}
-
-.row-feedback {
-	display: grid;
-	grid-template-rows: 1fr;
-	grid-template-columns: 240px 1fr 1fr;
-}
-.slider-works-row-feedback-image {
-	margin: 46px 0 48px 107px;
-	width: 104px;
-	height: 104px;
-}
-
-.slider-works-row-feedback-image img {
-	max-width: 100%;
-	width: 104px;
-	height: 104px;
-}
-.slider-works-row-feedback-content {
-	min-width: 930px;
-}
-.slider-works-row-feedback-title_m {
-	text-align: center;
-	padding-top: 19px;
-	padding-bottom: 7px;
-	font-size: 30px;
-	line-height: 74.24%;
-	letter-spacing: 0.025em;
-	font-weight: 400;
-	color: #000;
-}
-
-.slider-works-row-feedback-title {
-	font-weight: 700;
-	font-size: 30px;
-	line-height: 74.24%;
-	letter-spacing: 0.025em;
-	color: #000;
-	padding-bottom: 12px;
-}
-.slider-works-row-feedback-text {
-	font-size: 25px;
-	line-height: 100%;
-	font-weight: 400;
-	letter-spacing: 0.025em;
-	color: #000;
-}
-
-/* Стрелочка вперед для слайдера позиционируем абсолютно (абсолютно родителя, которому мы выше задавали position:relative, чтобы стрелочки слайдера находились в нужном для нас контейнере, их мы позиционируем, в данном случае, св-вами top: 50%; right: 23px;) */
-.slick-next {
-	position: absolute;
-	background-color: transparent;
-	border: none;
-	background-image: url("../images/our-works/arrow-next.svg");
-	background-repeat: no-repeat;
-	background-size: 50px 70px;
-	background-position: center;
-	top: 45%;
-	right: 180px;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
-	text-indent: -9999px;
-	display: block;
-	width: 50px;
-	height: 70px;
-	opacity: 1;
-	-webkit-transition: background-color 0.3s ease;
-	-o-transition: background-color 0.3s ease;
-	transition: background-color 0.3s ease;
-	cursor: pointer;
-	z-index: 999;
-}
-
-/* Стрелочка назад для слайдера позиционируем абсолютно (абсолютно родителя, которому мы выше задавали position:relative, чтобы стрелочки слайдера находились в нужном для нас контейнере, их мы позиционируем, в данном случае, св-вами top: 50%; right: 23px;) */
-.slick-prev {
-	position: absolute;
-	background-color: transparent;
-	border: none;
-	background-image: url("../images/our-works/arrow-prev.svg");
-	background-repeat: no-repeat;
-	background-size: 50px 70px;
-	background-position: center;
-	top: 45%;
-	left: 180px;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
-	text-indent: -9999px;
-	display: block;
-	width: 50px;
-	height: 70px;
-	opacity: 1;
-	-webkit-transition: background-color 0.3s ease;
-	-o-transition: background-color 0.3s ease;
-	transition: background-color 0.3s ease;
-	cursor: pointer;
-	z-index: 999;
-}
-
-.slick-dots {
-	display: flex !important;
-	list-style-type: none;
-	justify-content: center;
-	text-indent: -9999px;
-	padding: 23px 0 48px 0;
-	cursor: pointer;
-}
-
-.slick-dots > li.slick-active {
-	background: #ce8272;
-	opacity: 1;
-}
-.slick-dots > li {
-	width: 8px;
-	height: 8px;
-	border-radius: 50%;
-	background: rgba(206, 130, 114, 0.5);
-	opacity: 1;
-	margin-right: 7px;
-	margin-left: 6px;
-	transition: 0.3s ease;
 }
