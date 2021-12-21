@@ -1,8 +1,15 @@
-/* Стили для главного заголовка страницы */
+.header-logo-link,
+.footer-logo-link {
+	max-width: 216px;
+	display: block;
+}
+
+/* Отступ сверху для секции */
 .prise {
 	margin-top: 170px;
 }
 
+/* Стили для главного заголовка страницы */
 .price-title {
 	font-family: Philosopher;
 	font-weight: 400;
@@ -18,6 +25,8 @@
 .price-table {
 	padding-bottom: 12px;
 }
+
+/* Стили для аккордиона */
 .price-table-list {
 	display: flex;
 	align-items: center;
@@ -30,43 +39,54 @@
 	letter-spacing: 0.025em;
 	color: #000;
 }
+
+/* Стили для уровней услуг (мастер, профи, эксперт) - задаем отступ справа */
 .price-table-item {
 	padding-right: 118px;
 }
 
+/* Обнуляем стандартные бутстраповские внутренние отступы для аккордеона */
 .accordion-body {
 	padding: 0;
 }
 
+/* Добавляем необходимый отступ вниз для аккордеона */
 .accordion {
 	padding-bottom: 184px;
 }
 
+/* Окрашиваем в черный цвет текст - название улуги для аккордеона */
 .accordion-button {
 	color: #000;
+	max-height: 80px;
 }
 
+/* Убираем стандартные бутстраповские стили: цвет фона и обводка для аккордеона */
 .accordion-item {
 	background-color: transparent;
 	border: none;
 }
 
+/* Стили для аккордиона, отступы между элементами аккордиона, кроме последнего */
 .accordion-item:not(:last-child) {
-	margin-bottom: 36px;
+	margin-bottom: 30px;
 }
 
+/* Стили для аккордиона, делаем обводку, задаем прозрачный фон и верхний отступ */
 .accordion-body {
 	background-color: transparent;
 	border-top: 2px solid #01555f;
 	margin-top: 18px;
 }
 
+/* Стили для аккордиона, стилизация списков (общий) */
 .accordion-body-list {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin-top: 30px;
-	padding: 26px 120px 26px 20px;
+	max-height: 80px;
+	margin-top: 15px;
+	padding: 21px 120px 21px 20px;
 	background: rgba(1, 85, 95, 0.05);
 	border: 1px solid #01555f;
 	margin-bottom: 30px;
@@ -82,16 +102,19 @@
 	border: 2px solid red;
 }
 
+/* Внутренний отступ справа для элементов списка аккордеона */
 .accordion-body-list li:not(:last-child) {
 	padding-right: 130px;
 }
 
+/* Стили для аккордиона, отодвигаем блоки с ценами от названия услуги - флексом позволяем увеличиваться первый элемент списка (элемент с названием услуги) */
 .accordion-body-list li:first-child {
 	flex: 1 1 auto;
 	max-width: 566px;
 	padding-right: 0px;
 }
 
+/* Стили для аккордиона, стилизация цен (стоимости работ) */
 .accordion-body-item span {
 	font-family: Philosopher;
 	font-weight: 400;
@@ -102,20 +125,24 @@
 	color: #01555f;
 }
 
+/* Стили для аккордеона, когда тот свернут */
 .accordion-button:not(.collapsed) {
 	color: #000000;
 	background: rgba(1, 85, 95, 0.05);
 	box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
 }
 
+/* Стили для аккордиона, обнуление и скрытие ненужных элементов */
 .accordion-button:not(.collapsed)::after {
 	display: none;
 }
 
+/* Стили для аккордиона, обнуление и скрытие ненужных элементов */
 .accordion-button::after {
 	display: none;
 }
 
+/* Стили для аккордиона, внутренние отступы, размеры шрифта и фон */
 .accordion-button {
 	font-family: Tinos;
 	font-weight: 400;
@@ -128,10 +155,12 @@
 	color: #000;
 }
 
+/* Стили для аккордиона, стилизация стрелочки - при нажатии - переворачивается */
 .accordion-button:not(.collapsed)::before {
 	transform: rotate(180deg);
 }
 
+/* Стили для аккордиона, стилизация стрелочки */
 .accordion-button::before {
 	flex-shrink: 0;
 	transform: rotate(0deg);
@@ -144,4 +173,542 @@
 	background-repeat: no-repeat;
 	background-size: 40px;
 	transition: transform 0.2s ease-in-out;
+}
+
+.footer-contacts a {
+	margin-left: 7px;
+}
+
+/* Ниже медиазапросы для адаптивности (принцип mobile-first - от разрешений для малениких экранов до больших). По большей части использованы для адекватного отображения текстов на различных разрешениях экранов */
+@media (min-width: 320px) {
+	.header-body {
+		margin-right: 0;
+	}
+	.header-link {
+		font-size: 14px;
+	}
+	.header-item:not(:last-child) {
+		margin-right: 10px;
+	}
+	.header-logo,
+	.footer-logo {
+		font-size: 28px;
+	}
+
+	.price-table {
+		padding-bottom: 12px;
+	}
+
+	.price-table-list {
+		font-size: 16px;
+	}
+
+	.price-table-item {
+		padding-right: 15px;
+	}
+
+	.price-title {
+		font-size: 28px;
+		margin-bottom: 60px;
+	}
+
+	.accordion {
+		padding-bottom: 60px;
+	}
+
+	.accordion-button {
+		font-size: 18px;
+		line-height: 108.24%;
+
+		padding: 15px 15px 15px 15px;
+	}
+
+	.accordion-button::before {
+		flex-shrink: 0;
+		transform: rotate(0deg);
+		width: 20px;
+		height: 20px;
+		margin-right: 15px;
+		padding-left: 15px;
+		content: "";
+		background-image: url(../images/price/price-arrow.svg);
+		background-repeat: no-repeat;
+		background-size: 20px;
+		transition: transform 0.2s ease-in-out;
+	}
+
+	.accordion-body-list {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 20px;
+		padding: 8px 8px 8px 8px;
+		background: rgba(1, 85, 95, 0.05);
+		border: 1px solid #01555f;
+		margin-bottom: 20px;
+		font-family: Tinos;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 108.24%;
+		letter-spacing: 0.025em;
+		color: #000000;
+	}
+
+	.accordion-body-list li:not(:last-child) {
+		padding-right: 10px;
+	}
+
+	.accordion-body-item span {
+		font-size: 16px;
+	}
+	.footer-contacts {
+		font-size: 16px;
+		margin-right: 10px;
+	}
+	.footer-contacts {
+		/* line-height: 150%; */
+	}
+
+	.footer-link {
+		height: 30px;
+	}
+	.insta,
+	.vk,
+	.fb {
+		background-size: 30px 30px;
+		background-repeat: no-repeat;
+		z-index: 10;
+		transition: 0.3s ease-in;
+	}
+	.footer-list-item:not(:last-child) {
+		margin-right: 0px;
+	}
+
+	.footer-address:not(:last-child) {
+		padding-bottom: 10px;
+	}
+}
+
+@media (min-width: 576px) {
+	.header-body {
+		margin-right: 0;
+	}
+	.header-link {
+		font-size: 18px;
+	}
+	.header-item:not(:last-child) {
+		margin-right: 10px;
+	}
+	.header-logo {
+		font-size: 32px;
+	}
+}
+
+@media (min-width: 768px) {
+	.price-table {
+		padding-bottom: 12px;
+	}
+
+	.price-table-list {
+		font-size: 16px;
+	}
+
+	.price-table-item {
+		padding-right: 45px;
+	}
+
+	.price-title {
+		font-size: 28px;
+		margin-bottom: 60px;
+	}
+
+	.accordion-button {
+		font-size: 18px;
+		line-height: 108.24%;
+		padding: 21px 0px 21px 27px;
+	}
+
+	.accordion-button::before {
+		flex-shrink: 0;
+		transform: rotate(0deg);
+		width: 20px;
+		height: 20px;
+		margin-right: 15px;
+		padding-left: 15px;
+		content: "";
+		background-image: url(../images/price/price-arrow.svg);
+		background-repeat: no-repeat;
+		background-size: 20px;
+		transition: transform 0.2s ease-in-out;
+	}
+
+	.accordion-body-list {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-height: 80px;
+		margin-top: 15px;
+		padding: 8px 8px 8px 20px;
+		background: rgba(1, 85, 95, 0.05);
+		border: 1px solid #01555f;
+		margin-bottom: 20px;
+		font-family: Tinos;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 108.24%;
+		letter-spacing: 0.025em;
+		color: #000000;
+	}
+
+	.accordion-body-list li:not(:last-child) {
+		padding-right: 65px;
+	}
+
+	.accordion-body-item span {
+		font-size: 16px;
+	}
+}
+
+@media (min-width: 992px) {
+	.header-body {
+		margin-right: 10px;
+	}
+	.header-link {
+		font-size: 35px;
+	}
+	.header-item:not(:last-child) {
+		margin-right: 5px;
+	}
+	.header-logo,
+	.footer-logo {
+		font-size: 36px;
+	}
+	.accordion {
+		padding-bottom: 184px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.header-logo,
+	.footer-logo {
+		font-size: 45px;
+	}
+	.price-title {
+		font-family: Philosopher;
+		font-weight: 400;
+		font-size: 60px;
+		line-height: 100%;
+		padding-top: 170px;
+		margin-bottom: 58px;
+		letter-spacing: 0.025em;
+		color: #000;
+		margin-bottom: 122px;
+	}
+
+	.price-table {
+		padding-bottom: 12px;
+	}
+	.price-table-list {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		font-family: Tinos;
+		font-weight: 400;
+		font-size: 35px;
+		line-height: 108.24%;
+		text-align: center;
+		letter-spacing: 0.025em;
+		color: #000;
+	}
+	.price-table-item {
+		padding-right: 75px;
+	}
+
+	.accordion-body {
+		padding: 0;
+	}
+
+	.accordion {
+		padding-bottom: 184px;
+	}
+
+	.accordion-button {
+		color: #000;
+	}
+
+	.accordion-item {
+		background-color: transparent;
+		border: none;
+	}
+
+	.accordion-item:not(:last-child) {
+		margin-bottom: 30px;
+	}
+
+	.accordion-body {
+		background-color: transparent;
+		border-top: 2px solid #01555f;
+		margin-top: 15px;
+	}
+
+	.accordion-body-list {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 15px;
+		padding: 21px 20px 21px 20px;
+		background: rgba(1, 85, 95, 0.05);
+		border: 1px solid #01555f;
+		margin-bottom: 15px;
+		font-family: Tinos;
+		font-weight: 400;
+		font-size: 35px;
+		line-height: 108.24%;
+		letter-spacing: 0.025em;
+		color: #000000;
+	}
+
+	.accordion-body-list:focus {
+		border: 2px solid red;
+	}
+
+	.accordion-body-list li:not(:last-child) {
+		padding-right: 110px;
+	}
+
+	.accordion-body-list li:first-child {
+		flex: 1 1 auto;
+		max-width: 566px;
+		padding-right: 0px;
+	}
+
+	.accordion-body-item span {
+		font-family: Philosopher;
+		font-weight: 400;
+		font-size: 35px;
+		line-height: 171%;
+		text-align: center;
+		letter-spacing: 0.025em;
+		color: #01555f;
+	}
+
+	.accordion-button:not(.collapsed) {
+		color: #000000;
+		background: rgba(1, 85, 95, 0.05);
+		box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+	}
+
+	.accordion-button:not(.collapsed)::after {
+		display: none;
+	}
+
+	.accordion-button::after {
+		display: none;
+	}
+
+	.accordion-button {
+		font-family: Tinos;
+		font-weight: 400;
+		font-size: 35px;
+		line-height: 108.24%;
+		padding: 21px 0px 21px 27px;
+		text-align: center;
+		letter-spacing: 0.025em;
+		background: rgba(1, 85, 95, 0.05);
+		color: #000;
+	}
+
+	.accordion-button:not(.collapsed)::before {
+		transform: rotate(180deg);
+	}
+
+	.accordion-button::before {
+		flex-shrink: 0;
+		transform: rotate(0deg);
+		width: 40px;
+		height: 40px;
+		margin-right: 48px;
+		padding-left: 27px;
+		content: "";
+		background-image: url("../images/price/price-arrow.svg");
+		background-repeat: no-repeat;
+		background-size: 40px;
+		transition: transform 0.2s ease-in-out;
+	}
+
+	.footer-contacts {
+		font-size: 20px;
+		margin-right: 28px;
+	}
+
+	.footer-link {
+		height: 50px;
+	}
+	.insta,
+	.vk,
+	.fb {
+		background-size: 50px 50px;
+		background-repeat: no-repeat;
+		z-index: 10;
+		transition: 0.3s ease-in;
+	}
+	.footer-list-item:not(:last-child) {
+		margin-right: 21px;
+	}
+
+	.footer-address:not(:last-child) {
+		padding-bottom: 45px;
+	}
+}
+
+@media (min-width: 1300px) {
+	.header-body {
+		margin-right: 130px;
+	}
+}
+
+@media (min-width: 1400px) {
+	.price-title {
+		font-family: Philosopher;
+		font-weight: 400;
+		font-size: 60px;
+		line-height: 100%;
+		padding-top: 170px;
+		margin-bottom: 58px;
+		letter-spacing: 0.025em;
+		color: #000;
+		margin-bottom: 122px;
+	}
+
+	.price-table {
+		padding-bottom: 12px;
+	}
+	.price-table-list {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		font-family: Tinos;
+		font-weight: 400;
+		font-size: 35px;
+		line-height: 108.24%;
+		text-align: center;
+		letter-spacing: 0.025em;
+		color: #000;
+	}
+	.price-table-item {
+		padding-right: 118px;
+	}
+
+	.accordion-body {
+		padding: 0;
+	}
+
+	.accordion {
+		padding-bottom: 184px;
+	}
+
+	.accordion-button {
+		color: #000;
+	}
+
+	.accordion-item {
+		background-color: transparent;
+		border: none;
+	}
+
+	.accordion-item:not(:last-child) {
+		margin-bottom: 30px;
+	}
+
+	.accordion-body {
+		background-color: transparent;
+		border-top: 2px solid #01555f;
+		margin-top: 15px;
+	}
+
+	.accordion-body-list {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-height: 80px;
+		margin-top: 15px;
+		padding: 21px 120px 21px 20px;
+		background: rgba(1, 85, 95, 0.05);
+		border: 1px solid #01555f;
+		margin-bottom: 30px;
+		font-family: Tinos;
+		font-weight: 400;
+		font-size: 35px;
+		line-height: 108.24%;
+		letter-spacing: 0.025em;
+		color: #000000;
+	}
+
+	.accordion-body-list:focus {
+		border: 2px solid red;
+	}
+
+	.accordion-body-list li:not(:last-child) {
+		padding-right: 130px;
+	}
+
+	.accordion-body-list li:first-child {
+		flex: 1 1 auto;
+		max-width: 566px;
+		padding-right: 0px;
+	}
+
+	.accordion-body-item span {
+		font-family: Philosopher;
+		font-weight: 400;
+		font-size: 35px;
+		line-height: 171%;
+		text-align: center;
+		letter-spacing: 0.025em;
+		color: #01555f;
+	}
+
+	.accordion-button:not(.collapsed) {
+		color: #000000;
+		background: rgba(1, 85, 95, 0.05);
+		box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+	}
+
+	.accordion-button:not(.collapsed)::after {
+		display: none;
+	}
+
+	.accordion-button::after {
+		display: none;
+	}
+
+	.accordion-button {
+		font-family: Tinos;
+		font-weight: 400;
+		font-size: 35px;
+		line-height: 108.24%;
+		padding: 21px 0px 21px 27px;
+		text-align: center;
+		letter-spacing: 0.025em;
+		background: rgba(1, 85, 95, 0.05);
+		color: #000;
+	}
+
+	.accordion-button:not(.collapsed)::before {
+		transform: rotate(180deg);
+	}
+
+	.accordion-button::before {
+		flex-shrink: 0;
+		transform: rotate(0deg);
+		width: 40px;
+		height: 40px;
+		margin-right: 48px;
+		padding-left: 27px;
+		content: "";
+		background-image: url("../images/price/price-arrow.svg");
+		background-repeat: no-repeat;
+		background-size: 40px;
+		transition: transform 0.2s ease-in-out;
+	}
 }

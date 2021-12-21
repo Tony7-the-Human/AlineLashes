@@ -481,13 +481,8 @@ img {
 	position: relative;
 }
 
-.columns-column {
-	position: relative !important;
-}
-
 /* Для слайдера тоже используем flex */
 .item {
-	
 	display: flex;
 	align-items: center;
 	z-index: 1;
@@ -517,10 +512,6 @@ img {
 	transition: background-color 0.3s ease;
 	cursor: pointer;
 	z-index: 999;
-}
-
-.slick-slider {
-    position: relative !important;
 }
 
 /* Стрелочка назад для слайдера позиционируем абсолютно (абсолютно родителя, которому мы выше задавали position:relative, чтобы стрелочки слайдера находились в нужном для нас контейнере, их мы позиционируем, в данном случае, св-вами top: 50%; right: 23px;) */
@@ -778,6 +769,7 @@ img {
 	flex-shrink: 0;
 	min-height: 139px;
 	background-color: rgba(250, 223, 214, 0.7);
+	padding-bottom: 30px;
 }
 
 /* На всю контентную часть делаем flex и располагаем их на одинаковом расстоянии друг от друга с помощью св-ва justify-content: space-around; */
@@ -785,18 +777,19 @@ img {
 .footer-body {
 	display: flex;
 	justify-content: space-around;
-	align-items: center;
+	/* align-items: center; */
+	padding-top: 28px;
 }
 
 /* Стили для адресов */
 
 .footer-contacts {
-	padding-top: 10px;
-	padding-bottom: 21px;
 	font-size: 20px;
-	line-height: 300%;
 	letter-spacing: 0.025em;
 	color: #000;
+}
+.footer-contacts a {
+	margin-left: 7px;
 }
 
 /* Внутренний отступ для адресов */
@@ -815,6 +808,8 @@ img {
 /* Flex для кконтейнера с параграфом и иконками соц.сетей */
 .footer-socials {
 	display: flex;
+	align-items: center;
+	padding-top: 26px;
 }
 
 /* Задаем иконкам соц.сетей flex, тем самым выстраивая их в линию */
@@ -877,411 +872,3 @@ img {
 .fb:hover {
 	background-image: url("../images/icons/fb-hover.png");
 }
-
-
-
-/* Для главной страницы и страницы "Наши работы" делаем стили для прижатия футера к низу страницы (необходимо для того, чтобы футер не висел в середине, к примеру, страницы при варианте, если высота контентной части меньше, чем высота разрешения экрана пользователя) 
-В разметке добавлены блоки с классами page-wrapper (общая обертка для всего контента), блок main (обертка для контента, за исключением хедера и футера)
-
-Для тега html задаем высоту 100%
-
-Задаем грид для общего контейнера
-.page-wrapper {
-	overflow: hidden;
-	display: grid;
-	grid-template-rows: 1fr auto;
-	width: 100%;
-	min-height: 100%;
-}
-
-И для футера задаем ограничения, позволяющие ему оставаться прижатым к самому низу
-.footer {
-	grid-row-start: 2;
-	grid-row-end: 3;
-	
-}
-
-*/
-
-.our-works {
-	position: relative;
-	padding-top: 164px;
-	padding-bottom: 57px;
-}
-
-/* Стилизуем ссылки меню. Св-во transition: color 0.3s ease-in; делает изменение цвета текста при наведении более плавным */
-.header-link {
-	font-size: 35px;
-	line-height: 74.24%;
-	text-align: center;
-	letter-spacing: 0.025em;
-	color: #000;
-	transition: color 0.3s ease-in;
-	cursor: pointer;
-}
-
-/* Добавляем эффект при наведении на ссылку меню */
-.header-link:hover {
-	color: #ce8272;
-}
-
-/* Стили для главного заголовка страницы */
-.our-works-title {
-	font-family: Philosopher;
-	font-weight: 400;
-	font-size: 60px;
-	line-height: 100%;
-	margin-bottom: 58px;
-	letter-spacing: 0.025em;
-	color: #000000;
-}
-
-/* Задаем обертке слайдера позицию inherit (наследование) от тега body, т.к. стреловки слайдера по макету располагаются вне ограничивающего контейнера (.container). Св-во !important служит для задания авторского стиля, в том случае, если возникают противоречия с остальными стилями */
-.slick-slider {
-	position: inherit !important;
-}
-
-/* Задаем грид для общего грид-контейнера, делаем две строки для картрнки (шириной 335рх) и блока с текстом (1fr - единица длины fr представляет собой долю (fraction) доступного пространства в грид-контейнере) */
-.our-works-slider-body {
-	display: grid;
-	grid-template-rows: 335px 1fr;
-	row-gap: 57px;
-}
-
-/* Задаем грид контейнер для первого (верхнего) блока слайдера, св-во gap - служит для задания внутренних отступов между колонками и рядами */
-.slider-works-row {
-	display: grid;
-	grid-template-rows: 335px;
-	grid-template-columns: 345px 1fr;
-	background: #fae6df;
-	gap: 0;
-}
-
-/* Стили для картинки */
-.slider-works-image img {
-	max-width: 100%;
-	height: 335px;
-	width: 345px;
-}
-
-/* Стили для коннтента (текстового блока) */
-.slider-works-content {
-	padding-top: 50px;
-	padding-bottom: 113px;
-	padding-left: 17px;
-}
-
-/* Стили текста заголовка первого блока слайдера */
-.slider-works-title {
-	font-family: "Tinos";
-	font-weight: 700;
-	font-size: 35px;
-	line-height: 74.24%;
-	letter-spacing: 0.025em;
-	color: #000;
-	padding-bottom: 27px;
-}
-
-/* Стили для текста первого блока */
-.slider-works-text {
-	font-size: 30px;
-	line-height: 133%;
-	letter-spacing: 0.025em;
-	color: #000000;
-	width: 780px;
-}
-
-/* Задаем грид для второго блока (нижнего) слайдера - задаем стили для рамки */
-.slider-works-row-feedback {
-	display: grid;
-	border: 2px solid #ce8272;
-	box-sizing: border-box;
-	border-radius: 120px;
-}
-
-/* Грид стили для внутреннего контента второго (нижнего) блока слайдера, задаем ширину в 1fr для ряда и для колонок 240px 1fr 1fr */
-.row-feedback {
-	display: grid;
-	grid-template-rows: 1fr;
-	grid-template-columns: 240px 1fr 1fr;
-}
-
-/* Стили для блока картинки */
-.slider-works-row-feedback-image {
-	margin: 46px 0 48px 107px;
-	width: 104px;
-	height: 104px;
-}
-
-/* Стили для картинки */
-.slider-works-row-feedback-image img {
-	max-width: 100%;
-	width: 104px;
-	height: 104px;
-}
-
-/* Ограничиваем контентную части с текстом */
-.slider-works-row-feedback-content {
-	min-width: 930px;
-}
-
-/* Стили для заголовка нижнего блока слайдера */
-.slider-works-row-feedback-title_m {
-	text-align: center;
-	padding-top: 19px;
-	padding-bottom: 7px;
-	font-size: 30px;
-	line-height: 74.24%;
-	letter-spacing: 0.025em;
-	font-weight: 400;
-	color: #000;
-}
-
-/* Стили для заголовка нижнего блока слайдера */
-.slider-works-row-feedback-title {
-	font-weight: 700;
-	font-size: 30px;
-	line-height: 74.24%;
-	letter-spacing: 0.025em;
-	color: #000;
-	padding-bottom: 12px;
-}
-
-/* Стили для текста нижнего блока слайдера */
-.slider-works-row-feedback-text {
-	font-size: 25px;
-	line-height: 100%;
-	font-weight: 400;
-	letter-spacing: 0.025em;
-	color: #000;
-}
-
-/* Стрелочка вперед для слайдера позиционируем абсолютно (абсолютно родителя, которому мы выше задавали position:relative, чтобы стрелочки слайдера находились в нужном для нас контейнере, их мы позиционируем, в данном случае, св-вами top: 50%; right: 23px;) */
-.slider .slick-next {
-	position: absolute;
-	background-color: transparent;
-	border: none;
-	background-image: url("../images/our-works/arrow-next.svg");
-	background-repeat: no-repeat;
-	background-size: 50px 70px;
-	background-position: center;
-	top: 45%;
-	right: 18%;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
-	text-indent: -9999px;
-	display: block;
-	width: 50px;
-	height: 70px;
-	opacity: 1;
-	-webkit-transition: background-color 0.3s ease;
-	-o-transition: background-color 0.3s ease;
-	transition: background-color 0.3s ease;
-	cursor: pointer;
-	z-index: 999;
-}
-
-/* Стрелочка назад для слайдера позиционируем абсолютно (абсолютно родителя, которому мы выше задавали position:relative, чтобы стрелочки слайдера находились в нужном для нас контейнере, их мы позиционируем, в данном случае, св-вами top: 50%; right: 23px;) */
-.slider .slick-prev {
-	position: absolute;
-	background-color: transparent;
-	border: none;
-	background-image: url("../images/our-works/arrow-prev.svg");
-	background-repeat: no-repeat;
-	background-size: 50px 70px;
-	background-position: center;
-	top: 45%;
-	left: 18%;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
-	text-indent: -9999px;
-	display: block;
-	width: 50px;
-	height: 70px;
-	opacity: 1;
-	-webkit-transition: background-color 0.3s ease;
-	-o-transition: background-color 0.3s ease;
-	transition: background-color 0.3s ease;
-	cursor: pointer;
-	z-index: 999;
-}
-
-/* Делаем точки под слайдером, флексом выравниваем их в ряд и выставляем по центру с помощью св-ва justify-content: center; Выставляем внутренние отступы */
-.slick-dots {
-	display: flex !important;
-	list-style-type: none;
-	justify-content: center;
-	text-indent: -9999px;
-	padding: 23px 0 48px 0;
-	cursor: pointer;
-}
-
-/* Меняем цвет и прозрачность активной точки */
-.slick-dots > li.slick-active {
-	background: #ce8272;
-	opacity: 1;
-}
-
-/* Задаем цвет и прозрачность у остальных точек, делаем их круглыми */
-.slick-dots > li {
-	width: 8px;
-	height: 8px;
-	border-radius: 50%;
-	background: rgba(206, 130, 114, 0.5);
-	opacity: 1;
-	margin-right: 7px;
-	margin-left: 6px;
-	transition: 0.3s ease;
-}
-
-
-/* Стили для главного заголовка страницы */
-.prise {
-	margin-top: 170px;
-}
-
-.price-title {
-	font-family: Philosopher;
-	font-weight: 400;
-	font-size: 60px;
-	line-height: 100%;
-	padding-top: 170px;
-	margin-bottom: 58px;
-	letter-spacing: 0.025em;
-	color: #000;
-	margin-bottom: 122px;
-}
-
-.price-table {
-	padding-bottom: 12px;
-}
-.price-table-list {
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-	font-family: Tinos;
-	font-weight: 400;
-	font-size: 35px;
-	line-height: 108.24%;
-	text-align: center;
-	letter-spacing: 0.025em;
-	color: #000;
-}
-.price-table-item {
-	padding-right: 118px;
-}
-
-.accordion-body {
-	padding: 0;
-}
-
-.accordion {
-	padding-bottom: 184px;
-}
-
-.accordion-button {
-	color: #000;
-}
-
-.accordion-item {
-	background-color: transparent;
-	border: none;
-}
-
-.accordion-item:not(:last-child) {
-	margin-bottom: 36px;
-}
-
-.accordion-body {
-	background-color: transparent;
-	border-top: 2px solid #01555f;
-	margin-top: 18px;
-}
-
-.accordion-body-list {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	margin-top: 30px;
-	padding: 26px 120px 26px 20px;
-	background: rgba(1, 85, 95, 0.05);
-	border: 1px solid #01555f;
-	margin-bottom: 30px;
-	font-family: Tinos;
-	font-weight: 400;
-	font-size: 35px;
-	line-height: 108.24%;
-	letter-spacing: 0.025em;
-	color: #000000;
-}
-
-.accordion-body-list:focus {
-	border: 2px solid red;
-}
-
-.accordion-body-list li:not(:last-child) {
-	padding-right: 130px;
-}
-
-.accordion-body-list li:first-child {
-	flex: 1 1 auto;
-	max-width: 566px;
-	padding-right: 0px;
-}
-
-.accordion-body-item span {
-	font-family: Philosopher;
-	font-weight: 400;
-	font-size: 35px;
-	line-height: 171%;
-	text-align: center;
-	letter-spacing: 0.025em;
-	color: #01555f;
-}
-
-.accordion-button:not(.collapsed) {
-	color: #000000;
-	background: rgba(1, 85, 95, 0.05);
-	box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
-}
-
-.accordion-button:not(.collapsed)::after {
-	display: none;
-}
-
-.accordion-button::after {
-	display: none;
-}
-
-.accordion-button {
-	font-family: Tinos;
-	font-weight: 400;
-	font-size: 35px;
-	line-height: 108.24%;
-	padding: 21px 0px 21px 27px;
-	text-align: center;
-	letter-spacing: 0.025em;
-	background: rgba(1, 85, 95, 0.05);
-	color: #000;
-}
-
-.accordion-button:not(.collapsed)::before {
-	transform: rotate(180deg);
-}
-
-.accordion-button::before {
-	flex-shrink: 0;
-	transform: rotate(0deg);
-	width: 40px;
-	height: 40px;
-	margin-right: 48px;
-	padding-left: 27px;
-	content: "";
-	background-image: url("../images/price/price-arrow.svg");
-	background-repeat: no-repeat;
-	background-size: 40px;
-	transition: transform 0.2s ease-in-out;
-}
-

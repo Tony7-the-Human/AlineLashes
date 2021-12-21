@@ -1,0 +1,275 @@
+/* Стилизация формы, отступы, рамка */
+.form {
+	padding: 32px 25px 35px 25px;
+	border: 2px solid #ce8272;
+	box-sizing: border-box;
+	border-radius: 50px;
+	margin-bottom: 95px;
+}
+
+/* Стилизация инпутов */
+.form__input {
+	font-family: Tinos;
+	font-weight: 400;
+	font-size: 35px;
+	line-height: 108.24%;
+	padding: 21px 5px 21px 32px;
+	margin-bottom: 23px;
+	background: rgba(206, 130, 114, 0.07);
+	border-radius: 23px;
+	cursor: pointer;
+	height: 80px;
+	width: 100%;
+	border: none;
+	outline: none;
+}
+
+/* Стилизация инпутов: цвет для замещающего текста внутри инпутов */
+.form__input::placeholder {
+	color: black;
+}
+
+.form__input.date {
+	position: relative;
+	background-color: transparent;
+	padding-left: 94px;
+}
+
+/* Стилизация инпутов: убираем стандартный стил для календаря (для его стандартной иконки) */
+.form__input.date[type="text"]::-webkit-calendar-picker-indicator {
+	opacity: 0;
+}
+
+/* Стилизация инпутов: делаем свои иконки (стрелочка) */
+.date.form__input[type="text"] {
+	padding-left: 94px;
+	transform: rotate(0deg);
+	transition: background 0.25s ease-in;
+	color: #000;
+	background: rgba(206, 130, 114, 0.07) url("../images/icons/arrow-up-1.svg") 32px 50% no-repeat;
+}
+
+/* Стилизация инпутов: делаем свои иконки (стрелочка) при фокусе на инпуте - исчезает стрелочки и меняются отступы */
+.active.date.form__input[type="text"] {
+	padding-left: 94px;
+	color: #000;
+	transform: rotate(180deg);
+	background: rgba(206, 130, 114, 0.07) url("../images/icons/arrow-down-1.svg") 32px 50% no-repeat;
+}
+
+.date[value] {
+	font-family: Tinos;
+	font-weight: 400;
+	font-size: 35px;
+	line-height: 108.24%;
+	letter-spacing: 0.025em;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+/* Отступы */
+.appointment {
+	padding-top: 186px;
+}
+
+/* Стили для текста элементов выпадающих меню и списков */
+.appointment-title {
+	font-family: Philosopher;
+	font-weight: 400;
+	font-size: 60px;
+	line-height: 100%;
+	margin-bottom: 35px;
+	letter-spacing: 0.025em;
+	color: #000;
+}
+
+/* Стили для текста элементов выпадающих меню и списков */
+.appointment-accordion {
+	position: relative;
+	height: 80px;
+	margin-bottom: 23px;
+	background: rgba(206, 130, 114, 0.07);
+	border-radius: 23px;
+	color: #000;
+	padding: 21px 5px 21px 90px;
+}
+
+/* Стили для текста элементов выпадающих меню и списков */
+.appointment-accordion,
+.option {
+	font-family: Tinos;
+	font-weight: 400;
+	font-size: 35px;
+	line-height: 108.24%;
+	padding: 21px 5px 21px 32px;
+	text-align: center;
+	letter-spacing: 0.025em;
+	color: #000000;
+	cursor: pointer;
+	width: 100%;
+	text-align: left;
+	margin-bottom: 23px;
+	border: none;
+	outline: none;
+	transition: 0.4s;
+}
+
+/* Отступы при неактивном меню */
+.appointment-accordion {
+	padding: 21px 5px 21px 94px;
+}
+
+/* Отступы при активном меню */
+.appointment-accordion_l {
+	padding: 21px 5px 21px 32px;
+}
+
+/* Стилизация стрелочек (выполнены в виде псевдоэлементов ::before) */
+.appointment-accordion_before::before {
+	position: absolute;
+	flex-shrink: 0;
+	width: 40px;
+	height: 40px;
+	top: 50%;
+	left: 32px;
+	transform: translateY(-50%) rotate(0deg);
+	margin-right: 22px;
+	padding-left: 43px;
+	content: "";
+	background-image: url("../images/icons/arrow-up-1.svg");
+	background-repeat: no-repeat;
+	background-size: 40px;
+	transition: transform 0.2s ease-in-out;
+}
+
+/* Стилизация стрелочек - активные (выполнены в виде псевдоэлементов ::before) */
+.active.appointment-accordion_before::before {
+	position: absolute;
+	flex-shrink: 0;
+	width: 40px;
+	height: 40px;
+	top: 50%;
+	left: 32px;
+	transform: translateY(-50%) rotate(180deg);
+	margin-right: 22px;
+	padding-left: 43px;
+	content: "";
+	background-image: url("../images/icons/arrow-up-1.svg");
+	background-repeat: no-repeat;
+	background-size: 40px;
+	transition: transform 0.2s ease-in-out;
+}
+/* Стилизация для выпадающих списков */
+.option {
+	width: 100%;
+	background: rgba(206, 130, 114, 0.07);
+	border-radius: 23px;
+	height: 80px;
+	margin-top: 11px;
+	margin-bottom: 23px;
+}
+
+/* Стилизация для выпадающих списков. Скрыты по умолчанию */
+.panel {
+	border-top: 2px solid #ce8272;
+	margin-top: -11px;
+	background-color: transparent;
+	display: none;
+	overflow: hidden;
+}
+
+/* Стилизация для кнопки отправки формы */
+button.appointment-btn {
+	margin-top: 10px;
+}
+
+/* Стилизация для кнопки отправки формы */
+.appointment-btn {
+	display: block;
+	margin: 0 auto;
+	font-size: 35px;
+	line-height: 74.24%;
+	text-align: center;
+	letter-spacing: 0.025em;
+	color: #000;
+}
+
+/* Стилизация для кнопки отправки формы */
+.appointment-btn {
+	background: rgba(206, 130, 114, 0.2);
+	border: 2px solid #ce8272;
+	text-align: center;
+	padding: 24px 80px;
+	height: 80px;
+	border-radius: 123.556px;
+	transition: all 0.3s ease-in;
+	cursor: pointer;
+	z-index: 9999;
+}
+
+/* Ховер-эффект для кнопки */
+.appointment-btn:hover {
+	background: rgba(1, 85, 95, 0.2);
+	border: 2px solid #01555f;
+	border-radius: 123.556px;
+	z-index: 9999;
+}
+
+/* Стили для модального окна */
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1050;
+	display: none;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.modal__dialog {
+	max-width: 700px;
+}
+.modal__content {
+	background: rgba(250, 230, 223, 1);
+	border: 2px solid #ce8272;
+	box-sizing: border-box;
+	box-shadow: 5px 10px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 50px;
+	padding: 103px 37px;
+	max-height: 80vh;
+	overflow-y: auto;
+}
+.modal__close {
+	position: absolute;
+	top: 8px;
+	right: 14px;
+	font-size: 30px;
+	color: #000;
+	opacity: 0.5;
+	font-weight: 700;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+.modal__title {
+	font-family: Tinos;
+	text-align: center;
+	font-weight: 400;
+	font-size: 35px;
+	line-height: 108.24%;
+
+	text-align: center;
+	letter-spacing: 0.025em;
+
+	color: #000;
+}
+
+.show {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hide {
+	display: none;
+}
