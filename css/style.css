@@ -25,7 +25,6 @@
 /* Общие стили, обнуляющие стандартные стили, которые задаются по умолчанию браузером */
 @import "./_ourworks";
 @import "./_pricelist";
-@import "./_appointment";
 
 html {
 	box-sizing: border-box;
